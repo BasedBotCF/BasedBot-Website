@@ -24,9 +24,6 @@ app.get('/github', function(req, res) {
 app.get('/commands', function(req, res) {
   res.sendFile(path.join(__dirname + '/commands.html'));
 });
-app.get('/foryou', function(req, res) {
-  res.sendFile(path.join(__dirname + '/youareanidiot.html'));
-});
 app.get('/favicon.ico', function(req, res) {
   res.sendFile(path.join(__dirname + '/favicon.ico'));
 });
