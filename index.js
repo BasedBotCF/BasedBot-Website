@@ -18,10 +18,22 @@ app.get('/checkhealth', function(req, res) {
 app.get('/commands', function(req, res) {
   res.sendFile(path.join(__dirname + '/commands.html'));
 });
+app.get('/server', function(req, res) {
+  res.sendFile(path.join(__dirname + '/server.html'));
+});
+app.get('/bestwebsiteever', function(req, res) {
+  res.sendFile(path.join(__dirname + '/bestwebsiteever.html'));
+});
 app.get('/favicon.ico', function(req, res) {
   res.sendFile(path.join(__dirname + '/favicon.ico'));
 });
 
+
+
+
+app.use((req, res,next)=>{
+  res.status(404).send('<h1> Not a real page dumbass </h1>');
+});
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})
+});
